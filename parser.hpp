@@ -27,8 +27,8 @@ public:
     void term();
     void match(int t);
 
-private:
-    static bool is_digit(char c);
+// private:
+//     static bool is_digit(char c);
 };
 
 #include "parser_impl.hpp"

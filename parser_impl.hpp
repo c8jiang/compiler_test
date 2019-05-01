@@ -1,4 +1,5 @@
 #include "parser.hpp"
+#include "basic.hpp"
 
 int parser::lookahead = 0;
 std::fstream parser::fs;
@@ -14,8 +15,6 @@ parser::parser(const char* file)
 
 parser::~parser()
 {
-    if (fs.is_open())
-        fs.close();
 }
 
 void parser::expr()
@@ -59,4 +58,4 @@ void parser::match(int t)
         throw syntax_error();
 }
 
-bool parser::is_digit(char c) { return '0' <= c && c <= '9'; }
+// bool parser::is_digit(char c) { return '0' <= c && c <= '9'; }
